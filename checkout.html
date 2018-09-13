@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/checkout.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="row header">
+      <h1><span class="header-title">Enjoei</span><img src="/assets/img/logo.jpg" alt="Enjoei logo"></h1>
+    </header>
+
+    <div class="row content">
+      <div class="product-img-container">
+        <img id="product-img" src="/assets/img/loading.gif" alt="">
+      </div>
+      <label class="section-label">cupons</label>
+      <div class="section-content cupons-section" id="cupons">
+        <div class="cupon-input">
+          <input type="radio" name="cupons" id="cp-not_use" value="not_use"><!--usar id do cupom-->
+          <label for="cp-not_use">
+            <span class="cupon-title">não usar cupom</span>
+            <span class="cupon-discount value debit-value"></span>
+          </label>
+        </div>
+      </div>
+
+      <label class="section-label">resumo</label>
+      <div class="section-content">
+        <div class="checkout-elm-row">
+          <span class="checkout-elm-title">valor original</span>
+          <span class="checkout-elm-value value" id="cev-value">R$ 12,00</span>
+        </div>
+        <div class="checkout-elm-row">
+          <span class="checkout-elm-title">cupom</span>
+          <span class="checkout-elm-value value debit-value" id="cev-cupon">- R$ 12,00</span>
+        </div>
+        <div class="checkout-elm-row">
+          <span class="checkout-elm-title">frete</span>
+          <span class="checkout-elm-value value" id="cev-frete">R$ 12,00</span>
+        </div>
+        <div class="checkout-elm-row">
+          <span class="checkout-elm-title">total</span>
+          <span class="checkout-elm-value value total-value" id="cev-total">R$ 12,00</span>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="row action-buttons">
+      <button id="cancel-checkout-bt">Cancelar</button><button id="confirm-checkout-bt">Confirmar</button>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous"></script>
+    <script src="/app/http/httpclient.js"></script>
+    <script src="/app/checkout/checkout.service.js"></script>
+    <script src="/app/checkout/checkout.controller.js"></script>
+  </body>
+</html>
