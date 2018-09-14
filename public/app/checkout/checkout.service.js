@@ -7,7 +7,7 @@ var CheckoutService = (function(){
         HttpClient.get(apiHost + 'api/checkouts/' + checkoutId + couponPar, success, error);
     };
 
-    var confirmCheckout = function(checkoutId){
+    var confirmCheckout = function(checkoutId, success, error){
         HttpClient.post(apiHost + 'api/checkouts/' + checkoutId, null, success, error);
     };
 

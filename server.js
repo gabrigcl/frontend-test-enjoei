@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-app.use(express.static('public'));
+app.use(express.static('public'))
 
 app.get('/', function (req, res) {
   res.redirect('/produto/1321/checkout/6544')

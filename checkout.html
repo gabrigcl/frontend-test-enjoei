@@ -10,6 +10,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+      crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/assets/css/checkout.css">
   </head>
   <body>
@@ -27,7 +30,7 @@
       <label class="section-label">cupons</label>
       <div class="section-content cupons-section" id="cupons">
         <div class="cupon-input">
-          <input type="radio" name="cupons" id="cp-not_use" value="not_use"><!--usar id do cupom-->
+          <input type="radio" name="cupons" id="cp-not_use" value="not_use" checked>
           <label for="cp-not_use">
             <span class="cupon-title">não usar cupom</span>
             <span class="cupon-discount value debit-value"></span>
@@ -39,19 +42,19 @@
       <div class="section-content">
         <div class="checkout-elm-row">
           <span class="checkout-elm-title">valor original</span>
-          <span class="checkout-elm-value value" id="cev-value">R$ 12,00</span>
+          <span class="checkout-elm-value value" id="cev-value"></span>
         </div>
         <div class="checkout-elm-row">
           <span class="checkout-elm-title">cupom</span>
-          <span class="checkout-elm-value value debit-value" id="cev-cupon">- R$ 12,00</span>
+          <span class="checkout-elm-value value debit-value" id="cev-cupon"></span>
         </div>
         <div class="checkout-elm-row">
           <span class="checkout-elm-title">frete</span>
-          <span class="checkout-elm-value value" id="cev-frete">R$ 12,00</span>
+          <span class="checkout-elm-value value" id="cev-frete"></span>
         </div>
         <div class="checkout-elm-row">
           <span class="checkout-elm-title">total</span>
-          <span class="checkout-elm-value value total-value" id="cev-total">R$ 12,00</span>
+          <span class="checkout-elm-value value total-value" id="cev-total"></span>
         </div>
       </div>
 
@@ -60,6 +63,13 @@
 
     <div class="row action-buttons">
       <button id="cancel-checkout-bt">Cancelar</button><button id="confirm-checkout-bt">Confirmar</button>
+    </div>
+
+    <div class="overlay alert-hide"></div>
+    <div class="alert alert-hide">
+      <p class="alert-icon" id="alert-ic-chk"><i class="fas fa-shopping-cart"></i></p>
+      <p class="alert-title" id="alert-title-chk"></p>
+      <p class="alert-text" id="alert-txt-chk"></p>
     </div>
 
     <script

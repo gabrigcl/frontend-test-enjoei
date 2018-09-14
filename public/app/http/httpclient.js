@@ -1,7 +1,6 @@
 var HttpClient = (function(){
 
     var response = function(xmlHttp, success, error) {
-        console.log(xmlHttp.status);
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
             if (typeof success === "function") {
                 success(xmlHttp.responseText);
@@ -23,9 +22,9 @@ var HttpClient = (function(){
     var post = function(url, data, success, error){
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open("POST", url, true);
-        xmlhttp.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        xmlHttp.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
         var par = (data) ? JSON.stringify(data) : "";
-        xmlhttp.send(par);
+        xmlHttp.send(par);
         xmlHttp.onreadystatechange = function(){
             response(xmlHttp, success, error);
         }
