@@ -1,6 +1,6 @@
 # Front-end Test Enjoei
 
-Teste realizado para seletivo na Enjoei.
+Test realized for a job at Enjoei.
 
 ### Instructions
 
